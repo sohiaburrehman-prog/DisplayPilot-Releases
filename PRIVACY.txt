@@ -1,0 +1,67 @@
+DISPLAYPILOT PRIVACY POLICY
+
+Last updated: October 2026
+
+DisplayPilot is a local Windows utility. This policy explains what information the Software handles.
+
+1. SUMMARY
+DisplayPilot is designed to run on your PC without sending your personal data to DisplayPilot servers. The Software does not include analytics, advertising, or cloud accounts.
+
+2. INFORMATION PROCESSED LOCALLY
+The Software may read and apply:
+  • connected monitor names, resolutions, refresh rates, and layout;
+  • Windows display configuration via operating-system APIs;
+  • a local log file at %LOCALAPPDATA%\DisplayPilot\log.txt for troubleshooting;
+  • optional "Start with Windows" registry entry under your user profile (HKCU).
+
+This information stays on your device unless you choose to share log files yourself.
+
+3. AUTO-SWAP PROFILES (LOCAL ONLY)
+If you enable per-app auto-swap profiles, DisplayPilot periodically checks which processes are running on your PC so it can match names you configured (for example, "game.exe"). This matching happens entirely on your device. DisplayPilot does not upload process lists, game activity, or profile rules to any server.
+
+4. LOCAL SETTINGS FILE
+DisplayPilot stores your preferences in %LOCALAPPDATA%\DisplayPilot\settings.json on your device. At a high level, this file may contain:
+  • rebindable hotkey bindings (open panel, optional cycle primary);
+  • custom monitor nicknames you assign (keyed by stable display device id);
+  • auto-swap profile rules you create (process or launcher name, optional resolved game exe, target monitor, restore-on-exit);
+  • first-run wizard completion flag;
+  • optional update-check preferences (enabled/disabled, last check time, dismissed release tag).
+
+This file is not transmitted automatically. You may delete it at any time; DisplayPilot will recreate defaults on next launch.
+
+5. TRIAL RECORD (LOCAL ONLY)
+To run the 14-day trial, DisplayPilot records when it first ran, in your user registry (HKCU\Software\DisplayPilot) and in %LOCALAPPDATA%\DisplayPilot\install.dat. Each copy is signed with a code derived on your PC from the computer name, your Windows user name, and the Windows machine identifier (MachineGuid), so that a copied or edited record is detected. Only the signature is stored; the identifiers themselves are not saved in the record, and nothing is sent anywhere. Uninstalling keeps the registry copy, so reinstalling does not restart the trial.
+
+6. LICENCE KEY AND PURCHASES
+If you enter a licence key, DisplayPilot stores it in %LOCALAPPDATA%\DisplayPilot\license.key and checks it on your PC without contacting a server. A licence key contains the name and email address it was issued to, a licence identifier, and the issue date, and DisplayPilot shows the name in Settings. When you buy a licence, the seller (or a reseller acting for us) receives the details needed to take payment and issue the key; we use your name and email address only to issue, resend, or support your licence and keep them as long as needed for that and for tax and accounting records. We never receive your full card details.
+
+7. OPTIONAL UPDATE CHECK
+When enabled in Settings, DisplayPilot may contact the public GitHub releases API for this project to learn whether a newer version tag exists. This request sends only what is needed to read release metadata (no account, no device identifier, no analytics). The check can be disabled at any time and is not required for display switching.
+
+8. INFORMATION NOT COLLECTED
+DisplayPilot does not intentionally collect:
+  • names, email addresses, or account credentials;
+  • browsing history or unrelated application activity;
+  • precise location;
+  • payment card details (see section 6 for purchases).
+
+9. NETWORK ACTIVITY
+The Software does not require an internet connection to swap primary displays or apply display modes. Aside from the optional update check described above, no telemetry endpoints are built into the application.
+
+10. THIRD PARTIES
+DisplayPilot uses Microsoft .NET and Windows APIs only. When the optional update check is enabled, it reads public release metadata from GitHub (subject to GitHub's terms). Your use of Windows is subject to Microsoft's terms and privacy practices.
+
+11. DATA RETENTION
+Log files and settings.json remain on your device until you delete them or uninstall the Software. Uninstalling deletes the %LOCALAPPDATA%\DisplayPilot folder, including settings, logs, install.dat, and the licence key file (keep your licence key email to re-enter it). The registry copy of the trial record is kept.
+
+12. CHILDREN
+The Software is a general-purpose system utility and is not directed at children under 13.
+
+13. CHANGES
+This policy may be updated in future releases. The "Last updated" date will change when it does.
+
+14. YOUR CHOICES
+You can disable "Start with Windows" in the tray menu, turn off the update check in Settings, delete or edit settings.json, delete log.txt, remove auto-swap profiles, and uninstall DisplayPilot at any time via Windows Settings or the supplied uninstaller.
+
+15. CONTACT
+Privacy questions may be sent to Sohiab Rehman at sohiab.rehman@pm.me.
